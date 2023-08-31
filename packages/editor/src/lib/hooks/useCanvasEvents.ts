@@ -15,6 +15,8 @@ export function useCanvasEvents() {
 				if ((e as any).isKilled) return
 				if (e.button !== 0 && e.button !== 1 && e.button !== 5) return
 
+				if (e.pointerType === 'touch') console.log(e.target)
+
 				setPointerCapture(e.currentTarget, e)
 
 				editor.dispatch({
@@ -27,6 +29,7 @@ export function useCanvasEvents() {
 
 			function onPointerMove(e: React.PointerEvent) {
 				if ((e as any).isKilled) return
+				if (e.pointerType === 'touch') return
 
 				if (e.clientX === lastX && e.clientY === lastY) return
 				lastX = e.clientX
@@ -43,6 +46,7 @@ export function useCanvasEvents() {
 			function onPointerUp(e: React.PointerEvent) {
 				if ((e as any).isKilled) return
 				if (e.button !== 0 && e.button !== 1 && e.button !== 2 && e.button !== 5) return
+				if (e.pointerType === 'touch') return
 				lastX = e.clientX
 				lastY = e.clientY
 
@@ -56,23 +60,23 @@ export function useCanvasEvents() {
 				})
 			}
 
-			function onTouchStart(e: React.TouchEvent) {
-				;(e as any).isKilled = true
-				// todo: investigate whether this effects keyboard shortcuts
-				// god damn it, but necessary for long presses to open the context menu
-				document.body.click()
-				preventDefault(e)
-			}
+			// function onTouchStart(e: React.TouchEvent) {
+			// 	;(e as any).isKilled = true
+			// 	// todo: investigate whether this effects keyboard shortcuts
+			// 	// god damn it, but necessary for long presses to open the context menu
+			// 	document.body.click()
+			// 	preventDefault(e)
+			// }
 
-			function onTouchEnd(e: React.TouchEvent) {
-				;(e as any).isKilled = true
-				if (
-					(e.target as HTMLElement).tagName !== 'A' &&
-					(e.target as HTMLElement).tagName !== 'TEXTAREA'
-				) {
-					preventDefault(e)
-				}
-			}
+			// function onTouchEnd(e: React.TouchEvent) {
+			// 	;(e as any).isKilled = true
+			// 	if (
+			// 		(e.target as HTMLElement).tagName !== 'A' &&
+			// 		(e.target as HTMLElement).tagName !== 'TEXTAREA'
+			// 	) {
+			// 		preventDefault(e)
+			// 	}
+			// }
 
 			function onDragOver(e: React.DragEvent<Element>) {
 				preventDefault(e)
@@ -98,8 +102,8 @@ export function useCanvasEvents() {
 				onPointerUp,
 				onDragOver,
 				onDrop,
-				onTouchStart,
-				onTouchEnd,
+				// onTouchStart,
+				// onTouchEnd,
 			}
 		},
 		[editor]
