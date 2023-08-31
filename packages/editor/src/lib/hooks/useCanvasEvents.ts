@@ -15,7 +15,7 @@ export function useCanvasEvents() {
 				if ((e as any).isKilled) return
 				if (e.button !== 0 && e.button !== 1 && e.button !== 5) return
 
-				if (e.pointerType === 'touch') console.log(e.target)
+				if (e.pointerType === 'touch') return
 
 				setPointerCapture(e.currentTarget, e)
 
