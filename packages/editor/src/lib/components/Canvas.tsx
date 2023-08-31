@@ -2,7 +2,7 @@ import { react, track, useQuickReactor, useValue } from '@tldraw/state'
 import { TLHandle, TLShapeId } from '@tldraw/tlschema'
 import { dedupe, modulate, objectMapValues } from '@tldraw/utils'
 import classNames from 'classnames'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useCanvasEvents } from '../hooks/useCanvasEvents'
 import { useCoarsePointer } from '../hooks/useCoarsePointer'
 import { useDocumentEvents } from '../hooks/useDocumentEvents'
@@ -22,6 +22,9 @@ import { ShapeIndicator } from './ShapeIndicator'
 /** @public */
 export const Canvas = track(function Canvas({ className }: { className?: string }) {
 	const editor = useEditor()
+	useEffect(() => {
+		editor.updateInstanceState({ canMoveCamera: false })
+	}, [editor])
 
 	const { Background, SvgDefs } = useEditorComponents()
 
