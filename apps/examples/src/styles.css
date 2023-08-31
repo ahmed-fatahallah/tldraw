@@ -20,9 +20,7 @@ html,
 }
 
 .tldraw__editor {
-	position: fixed;
-	inset: 0px;
-	overflow: hidden;
+	height: 160vh;
 }
 
 .examples {
