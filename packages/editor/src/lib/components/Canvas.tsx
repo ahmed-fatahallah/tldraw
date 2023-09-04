@@ -23,8 +23,10 @@ import { ShapeIndicator } from './ShapeIndicator'
 export const Canvas = track(function Canvas({ className }: { className?: string }) {
 	const editor = useEditor()
 	useEffect(() => {
+		editor.setCurrentTool('draw')
 		editor.updateInstanceState({ canMoveCamera: false })
 		editor.updateInstanceState({ isPenMode: true })
+		editor.updateInstanceState({ isFocused: true })
 	}, [editor])
 
 	const { Background, SvgDefs } = useEditorComponents()
@@ -83,30 +85,14 @@ export const Canvas = track(function Canvas({ className }: { className?: string 
 	)
 
 	useEffect(() => {
-		let isPen = false
-		const handlePointerDown = (e: PointerEvent) => {
-			if (e.pointerType === 'pen') {
-				isPen = true
-			} else {
-				isPen = false
-			}
-		}
-		const handleTouchStart = (e: TouchEvent) => {
-			if (isPen) {
-				e.preventDefault()
-			}
-		}
-
-		document.body.addEventListener('pointerdown', handlePointerDown)
-		document.body.addEventListener('touchstart', handleTouchStart, {
+		rCanvas.current?.addEventListener('touchstart', events.handleTouchStart, {
 			passive: false,
 		})
 
 		return () => {
-			document.body.removeEventListener('pointerdown', handlePointerDown)
-			document.body.removeEventListener('touchstart', handleTouchStart)
+			rCanvas.current?.removeEventListener('touchstart', events.handleTouchStart)
 		}
-	}, [])
+	}, [events])
 
 	React.useEffect(() => {
 		rCanvas.current?.focus()
