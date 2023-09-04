@@ -85,12 +85,13 @@ export const Canvas = track(function Canvas({ className }: { className?: string 
 	)
 
 	useEffect(() => {
-		rCanvas.current?.addEventListener('touchstart', events.handleTouchStart, {
+		const canvasRef = rCanvas.current
+		canvasRef?.addEventListener('touchstart', events.handleTouchStart, {
 			passive: false,
 		})
 
 		return () => {
-			rCanvas.current?.removeEventListener('touchstart', events.handleTouchStart)
+			canvasRef?.removeEventListener('touchstart', events.handleTouchStart)
 		}
 	}, [events])
 
