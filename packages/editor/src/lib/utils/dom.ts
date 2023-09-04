@@ -36,7 +36,6 @@ export function loopToHtmlElement(elm: Element): HTMLElement {
  * @public
  */
 export function preventDefault(event: React.BaseSyntheticEvent | Event) {
-	event.preventDefault()
 	if (debugFlags.preventDefaultLogging.value) {
 		console.warn('preventDefault called on event:', event)
 	}

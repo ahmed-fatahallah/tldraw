@@ -24,6 +24,7 @@ export const Canvas = track(function Canvas({ className }: { className?: string 
 	const editor = useEditor()
 	useEffect(() => {
 		editor.updateInstanceState({ canMoveCamera: false })
+		editor.updateInstanceState({ isPenMode: true })
 	}, [editor])
 
 	const { Background, SvgDefs } = useEditorComponents()
@@ -80,6 +81,32 @@ export const Canvas = track(function Canvas({ className }: { className?: string 
 		},
 		[editor]
 	)
+
+	useEffect(() => {
+		let isPen = false
+		const handlePointerDown = (e: PointerEvent) => {
+			if (e.pointerType === 'pen') {
+				isPen = true
+			} else {
+				isPen = false
+			}
+		}
+		const handleTouchStart = (e: TouchEvent) => {
+			if (isPen) {
+				e.preventDefault()
+			}
+		}
+
+		document.body.addEventListener('pointerdown', handlePointerDown)
+		document.body.addEventListener('touchstart', handleTouchStart, {
+			passive: false,
+		})
+
+		return () => {
+			document.body.removeEventListener('pointerdown', handlePointerDown)
+			document.body.removeEventListener('touchstart', handleTouchStart)
+		}
+	}, [])
 
 	React.useEffect(() => {
 		rCanvas.current?.focus()
