@@ -10,14 +10,13 @@ export function useCanvasEvents() {
 		function canvasEvents() {
 			// Track the last screen point
 			let lastX: number, lastY: number
-			let isPen = true
+			let isPenOrMouse = true
 			function onPointerDown(e: React.PointerEvent) {
 				if ((e as any).isKilled) return
 				if (e.button !== 0 && e.button !== 1 && e.button !== 5) return
-				if (e.pointerType === 'pen') {
-					isPen = true
+				if (e.pointerType === 'pen' || e.pointerType === 'mouse') {
+					isPenOrMouse = true
 					setPointerCapture(e.currentTarget, e)
-
 					editor.dispatch({
 						type: 'pointer',
 						target: 'canvas',
@@ -25,13 +24,12 @@ export function useCanvasEvents() {
 						...getPointerInfo(e),
 					})
 				} else {
-					isPen = false
+					isPenOrMouse = false
 				}
 			}
 
 			function onPointerMove(e: React.PointerEvent) {
 				if ((e as any).isKilled) return
-
 				if (e.clientX === lastX && e.clientY === lastY) return
 				lastX = e.clientX
 				lastY = e.clientY
@@ -62,7 +60,7 @@ export function useCanvasEvents() {
 			}
 
 			const handleTouchStart = (e: TouchEvent) => {
-				if (isPen) {
+				if (isPenOrMouse) {
 					e.preventDefault()
 				}
 			}
