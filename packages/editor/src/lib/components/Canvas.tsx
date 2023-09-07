@@ -22,6 +22,7 @@ import { ShapeIndicator } from './ShapeIndicator'
 /** @public */
 export const Canvas = track(function Canvas({ className }: { className?: string }) {
 	const editor = useEditor()
+
 	useEffect(() => {
 		editor.setCurrentTool('draw')
 		editor.updateInstanceState({ canMoveCamera: false })
@@ -65,7 +66,8 @@ export const Canvas = track(function Canvas({ className }: { className?: string 
 		[editor]
 	)
 
-	const events = useCanvasEvents()
+	// const events = useCanvasEvents()
+	const { handleTouchStart, ...events } = useCanvasEvents()
 
 	const shapeSvgDefs = useValue(
 		'shapeSvgDefs',
@@ -86,14 +88,14 @@ export const Canvas = track(function Canvas({ className }: { className?: string 
 
 	useEffect(() => {
 		const canvasRef = rCanvas.current
-		canvasRef?.addEventListener('touchstart', events.handleTouchStart, {
+		canvasRef?.addEventListener('touchstart', handleTouchStart, {
 			passive: false,
 		})
 
 		return () => {
-			canvasRef?.removeEventListener('touchstart', events.handleTouchStart)
+			canvasRef?.removeEventListener('touchstart', handleTouchStart)
 		}
-	}, [events])
+	}, [handleTouchStart])
 
 	React.useEffect(() => {
 		rCanvas.current?.focus()
