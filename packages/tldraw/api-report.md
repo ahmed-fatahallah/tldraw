@@ -147,7 +147,7 @@ export class ArrowShapeUtil extends ShapeUtil<TLArrowShape> {
         color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
         fill: EnumStyleProp<"none" | "pattern" | "semi" | "solid">;
         dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
-        size: EnumStyleProp<"l" | "m" | "s" | "xl">;
+        size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
         arrowheadStart: EnumStyleProp<"arrow" | "bar" | "diamond" | "dot" | "inverted" | "none" | "pipe" | "square" | "triangle">;
         arrowheadEnd: EnumStyleProp<"arrow" | "bar" | "diamond" | "dot" | "inverted" | "none" | "pipe" | "square" | "triangle">;
         font: EnumStyleProp<"draw" | "mono" | "sans" | "serif">;
@@ -320,7 +320,7 @@ export class DrawShapeUtil extends ShapeUtil<TLDrawShape> {
         color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
         fill: EnumStyleProp<"none" | "pattern" | "semi" | "solid">;
         dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
-        size: EnumStyleProp<"l" | "m" | "s" | "xl">;
+        size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
         segments: ArrayOfValidator<    {
         type: "free" | "straight";
         points: Vec2dModel[];
@@ -500,7 +500,7 @@ export class GeoShapeUtil extends BaseBoxShapeUtil<TLGeoShape> {
             color: "black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow";
             fill: "none" | "pattern" | "semi" | "solid";
             dash: "dashed" | "dotted" | "draw" | "solid";
-            size: "l" | "m" | "s" | "xl";
+            size: "l" | "m" | "s" | "xl" | "xxl";
             font: "draw" | "mono" | "sans" | "serif";
             align: "end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start";
             verticalAlign: "end" | "middle" | "start";
@@ -530,7 +530,7 @@ export class GeoShapeUtil extends BaseBoxShapeUtil<TLGeoShape> {
             color: "black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow";
             fill: "none" | "pattern" | "semi" | "solid";
             dash: "dashed" | "dotted" | "draw" | "solid";
-            size: "l" | "m" | "s" | "xl";
+            size: "l" | "m" | "s" | "xl" | "xxl";
             font: "draw" | "mono" | "sans" | "serif";
             align: "end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start";
             verticalAlign: "end" | "middle" | "start";
@@ -594,7 +594,7 @@ export class GeoShapeUtil extends BaseBoxShapeUtil<TLGeoShape> {
         color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
         fill: EnumStyleProp<"none" | "pattern" | "semi" | "solid">;
         dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
-        size: EnumStyleProp<"l" | "m" | "s" | "xl">;
+        size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
         font: EnumStyleProp<"draw" | "mono" | "sans" | "serif">;
         align: EnumStyleProp<"end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start">;
         verticalAlign: EnumStyleProp<"end" | "middle" | "start">;
@@ -671,7 +671,7 @@ export class HighlightShapeUtil extends ShapeUtil<TLHighlightShape> {
     // (undocumented)
     static props: {
         color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
-        size: EnumStyleProp<"l" | "m" | "s" | "xl">;
+        size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
         segments: ArrayOfValidator<    {
         type: "free" | "straight";
         points: Vec2dModel[];
@@ -796,7 +796,7 @@ export class LineShapeUtil extends ShapeUtil<TLLineShape> {
     static props: {
         color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
         dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
-        size: EnumStyleProp<"l" | "m" | "s" | "xl">;
+        size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
         spline: EnumStyleProp<"cubic" | "line">;
         handles: DictValidator<string, TLHandle>;
     };
@@ -854,7 +854,7 @@ export class NoteShapeUtil extends ShapeUtil<TLNoteShape> {
         props: {
             growY: number;
             color: "black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow";
-            size: "l" | "m" | "s" | "xl";
+            size: "l" | "m" | "s" | "xl" | "xxl";
             font: "draw" | "mono" | "sans" | "serif";
             align: "end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start";
             verticalAlign: "end" | "middle" | "start";
@@ -878,7 +878,7 @@ export class NoteShapeUtil extends ShapeUtil<TLNoteShape> {
         props: {
             growY: number;
             color: "black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow";
-            size: "l" | "m" | "s" | "xl";
+            size: "l" | "m" | "s" | "xl" | "xxl";
             font: "draw" | "mono" | "sans" | "serif";
             align: "end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start";
             verticalAlign: "end" | "middle" | "start";
@@ -902,7 +902,7 @@ export class NoteShapeUtil extends ShapeUtil<TLNoteShape> {
     // (undocumented)
     static props: {
         color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
-        size: EnumStyleProp<"l" | "m" | "s" | "xl">;
+        size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
         font: EnumStyleProp<"draw" | "mono" | "sans" | "serif">;
         align: EnumStyleProp<"end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start">;
         verticalAlign: EnumStyleProp<"end" | "middle" | "start">;
@@ -1012,7 +1012,7 @@ export class TextShapeUtil extends ShapeUtil<TLTextShape> {
         opacity: number;
         props: {
             color: "black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow";
-            size: "l" | "m" | "s" | "xl";
+            size: "l" | "m" | "s" | "xl" | "xxl";
             font: "draw" | "mono" | "sans" | "serif";
             align: "end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start";
             w: number;
@@ -1031,7 +1031,7 @@ export class TextShapeUtil extends ShapeUtil<TLTextShape> {
         props: {
             w: number;
             color: "black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow";
-            size: "l" | "m" | "s" | "xl";
+            size: "l" | "m" | "s" | "xl" | "xxl";
             font: "draw" | "mono" | "sans" | "serif";
             align: "end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start";
             text: string;
@@ -1071,7 +1071,7 @@ export class TextShapeUtil extends ShapeUtil<TLTextShape> {
     // (undocumented)
     static props: {
         color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
-        size: EnumStyleProp<"l" | "m" | "s" | "xl">;
+        size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
         font: EnumStyleProp<"draw" | "mono" | "sans" | "serif">;
         align: EnumStyleProp<"end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start">;
         w: Validator<number>;

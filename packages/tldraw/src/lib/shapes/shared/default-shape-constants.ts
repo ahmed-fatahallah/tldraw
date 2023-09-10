@@ -16,6 +16,7 @@ export const STROKE_SIZES: Record<TLDefaultSizeStyle, number> = {
 	m: 3.5,
 	l: 5,
 	xl: 10,
+	xxl: 20,
 }
 
 /** @public */
@@ -24,6 +25,7 @@ export const FONT_SIZES: Record<TLDefaultSizeStyle, number> = {
 	m: 24,
 	l: 36,
 	xl: 44,
+	xxl: 64,
 }
 
 /** @public */
@@ -32,6 +34,7 @@ export const LABEL_FONT_SIZES: Record<TLDefaultSizeStyle, number> = {
 	m: 22,
 	l: 26,
 	xl: 32,
+	xxl: 40,
 }
 
 /** @public */
@@ -40,6 +43,7 @@ export const ARROW_LABEL_FONT_SIZES: Record<TLDefaultSizeStyle, number> = {
 	m: 20,
 	l: 24,
 	xl: 28,
+	xxl: 32,
 }
 
 /** @public */

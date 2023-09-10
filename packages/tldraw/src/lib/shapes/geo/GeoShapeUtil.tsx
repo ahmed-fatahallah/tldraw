@@ -1058,6 +1058,7 @@ function getLabelSize(editor: Editor, shape: TLGeoShape) {
 		m: 3.5,
 		l: 5,
 		xl: 10,
+		xxl: 15,
 	}
 
 	const size = editor.textMeasure.measureText(text, {

@@ -32,7 +32,7 @@ export const arrowShapeProps: {
     color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
     fill: EnumStyleProp<"none" | "pattern" | "semi" | "solid">;
     dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
-    size: EnumStyleProp<"l" | "m" | "s" | "xl">;
+    size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
     arrowheadStart: EnumStyleProp<"arrow" | "bar" | "diamond" | "dot" | "inverted" | "none" | "pipe" | "square" | "triangle">;
     arrowheadEnd: EnumStyleProp<"arrow" | "bar" | "diamond" | "dot" | "inverted" | "none" | "pipe" | "square" | "triangle">;
     font: EnumStyleProp<"draw" | "mono" | "sans" | "serif">;
@@ -174,7 +174,7 @@ export const DefaultFontStyle: EnumStyleProp<"draw" | "mono" | "sans" | "serif">
 export const DefaultHorizontalAlignStyle: EnumStyleProp<"end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start">;
 
 // @public (undocumented)
-export const DefaultSizeStyle: EnumStyleProp<"l" | "m" | "s" | "xl">;
+export const DefaultSizeStyle: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
 
 // @public (undocumented)
 export const DefaultVerticalAlignStyle: EnumStyleProp<"end" | "middle" | "start">;
@@ -190,7 +190,7 @@ export const drawShapeProps: {
     color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
     fill: EnumStyleProp<"none" | "pattern" | "semi" | "solid">;
     dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
-    size: EnumStyleProp<"l" | "m" | "s" | "xl">;
+    size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
     segments: T.ArrayOfValidator<{
         type: "free" | "straight";
         points: Vec2dModel[];
@@ -481,7 +481,7 @@ export const geoShapeProps: {
     color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
     fill: EnumStyleProp<"none" | "pattern" | "semi" | "solid">;
     dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
-    size: EnumStyleProp<"l" | "m" | "s" | "xl">;
+    size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
     font: EnumStyleProp<"draw" | "mono" | "sans" | "serif">;
     align: EnumStyleProp<"end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start">;
     verticalAlign: EnumStyleProp<"end" | "middle" | "start">;
@@ -515,7 +515,7 @@ export const highlightShapeMigrations: Migrations;
 // @public (undocumented)
 export const highlightShapeProps: {
     color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
-    size: EnumStyleProp<"l" | "m" | "s" | "xl">;
+    size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
     segments: T.ArrayOfValidator<{
         type: "free" | "straight";
         points: Vec2dModel[];
@@ -667,7 +667,7 @@ export const lineShapeMigrations: Migrations;
 export const lineShapeProps: {
     color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
     dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
-    size: EnumStyleProp<"l" | "m" | "s" | "xl">;
+    size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
     spline: EnumStyleProp<"cubic" | "line">;
     handles: T.DictValidator<string, TLHandle>;
 };
@@ -681,7 +681,7 @@ export const noteShapeMigrations: Migrations;
 // @public (undocumented)
 export const noteShapeProps: {
     color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
-    size: EnumStyleProp<"l" | "m" | "s" | "xl">;
+    size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
     font: EnumStyleProp<"draw" | "mono" | "sans" | "serif">;
     align: EnumStyleProp<"end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start">;
     verticalAlign: EnumStyleProp<"end" | "middle" | "start">;
@@ -758,7 +758,7 @@ export const textShapeMigrations: Migrations;
 // @public (undocumented)
 export const textShapeProps: {
     color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
-    size: EnumStyleProp<"l" | "m" | "s" | "xl">;
+    size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
     font: EnumStyleProp<"draw" | "mono" | "sans" | "serif">;
     align: EnumStyleProp<"end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start">;
     w: T.Validator<number>;
