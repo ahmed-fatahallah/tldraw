@@ -21,7 +21,7 @@ export function useScreenBounds() {
 		// Rather than running getClientRects on every frame, we'll
 		// run it once a second or when the window resizes / scrolls.
 		updateBounds()
-		const interval = setInterval(updateBounds, 1000)
+		const interval = setInterval(updateBounds, 100)
 		window.addEventListener('resize', updateBounds)
 		window.addEventListener('scroll', updateBounds)
 
