@@ -13,6 +13,7 @@ export function getPointerInfo(e: React.PointerEvent | PointerEvent) {
 		ctrlKey: e.metaKey || e.ctrlKey,
 		pointerId: e.pointerId,
 		button: e.button,
-		isPen: e.pointerType === 'pen',
+		// isPen: e.pointerType === 'pen',
+		isPen: false,
 	}
 }
