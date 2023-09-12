@@ -143,8 +143,8 @@ export class ArrowShapeUtil extends ShapeUtil<TLArrowShape> {
     onTranslateStart: TLOnTranslateStartHandler<TLArrowShape>;
     // (undocumented)
     static props: {
-        labelColor: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
-        color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+        labelColor: EnumStyleProp<"#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black">;
+        color: EnumStyleProp<"#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black">;
         fill: EnumStyleProp<"none" | "pattern" | "semi" | "solid">;
         dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
         size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
@@ -317,7 +317,7 @@ export class DrawShapeUtil extends ShapeUtil<TLDrawShape> {
     onResize: TLOnResizeHandler<TLDrawShape>;
     // (undocumented)
     static props: {
-        color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+        color: EnumStyleProp<"#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black">;
         fill: EnumStyleProp<"none" | "pattern" | "semi" | "solid">;
         dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
         size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
@@ -496,8 +496,8 @@ export class GeoShapeUtil extends BaseBoxShapeUtil<TLGeoShape> {
         props: {
             growY: number;
             geo: "arrow-down" | "arrow-left" | "arrow-right" | "arrow-up" | "check-box" | "cloud" | "diamond" | "ellipse" | "hexagon" | "octagon" | "oval" | "pentagon" | "rectangle" | "rhombus-2" | "rhombus" | "star" | "trapezoid" | "triangle" | "x-box";
-            labelColor: "black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow";
-            color: "black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow";
+            labelColor: "#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black";
+            color: "#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black";
             fill: "none" | "pattern" | "semi" | "solid";
             dash: "dashed" | "dotted" | "draw" | "solid";
             size: "l" | "m" | "s" | "xl" | "xxl";
@@ -526,8 +526,8 @@ export class GeoShapeUtil extends BaseBoxShapeUtil<TLGeoShape> {
         props: {
             growY: number;
             geo: "arrow-down" | "arrow-left" | "arrow-right" | "arrow-up" | "check-box" | "cloud" | "diamond" | "ellipse" | "hexagon" | "octagon" | "oval" | "pentagon" | "rectangle" | "rhombus-2" | "rhombus" | "star" | "trapezoid" | "triangle" | "x-box";
-            labelColor: "black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow";
-            color: "black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow";
+            labelColor: "#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black";
+            color: "#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black";
             fill: "none" | "pattern" | "semi" | "solid";
             dash: "dashed" | "dotted" | "draw" | "solid";
             size: "l" | "m" | "s" | "xl" | "xxl";
@@ -590,8 +590,8 @@ export class GeoShapeUtil extends BaseBoxShapeUtil<TLGeoShape> {
     // (undocumented)
     static props: {
         geo: EnumStyleProp<"arrow-down" | "arrow-left" | "arrow-right" | "arrow-up" | "check-box" | "cloud" | "diamond" | "ellipse" | "hexagon" | "octagon" | "oval" | "pentagon" | "rectangle" | "rhombus-2" | "rhombus" | "star" | "trapezoid" | "triangle" | "x-box">;
-        labelColor: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
-        color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+        labelColor: EnumStyleProp<"#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black">;
+        color: EnumStyleProp<"#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black">;
         fill: EnumStyleProp<"none" | "pattern" | "semi" | "solid">;
         dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
         size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
@@ -670,7 +670,7 @@ export class HighlightShapeUtil extends ShapeUtil<TLHighlightShape> {
     onResize: TLOnResizeHandler<TLHighlightShape>;
     // (undocumented)
     static props: {
-        color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+        color: EnumStyleProp<"#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black">;
         size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
         segments: ArrayOfValidator<    {
         type: "free" | "straight";
@@ -794,7 +794,7 @@ export class LineShapeUtil extends ShapeUtil<TLLineShape> {
     onResize: TLOnResizeHandler<TLLineShape>;
     // (undocumented)
     static props: {
-        color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+        color: EnumStyleProp<"#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black">;
         dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
         size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
         spline: EnumStyleProp<"cubic" | "line">;
@@ -853,7 +853,7 @@ export class NoteShapeUtil extends ShapeUtil<TLNoteShape> {
     onBeforeCreate: (next: TLNoteShape) => {
         props: {
             growY: number;
-            color: "black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow";
+            color: "#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black";
             size: "l" | "m" | "s" | "xl" | "xxl";
             font: "draw" | "mono" | "sans" | "serif";
             align: "end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start";
@@ -877,7 +877,7 @@ export class NoteShapeUtil extends ShapeUtil<TLNoteShape> {
     onBeforeUpdate: (prev: TLNoteShape, next: TLNoteShape) => {
         props: {
             growY: number;
-            color: "black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow";
+            color: "#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black";
             size: "l" | "m" | "s" | "xl" | "xxl";
             font: "draw" | "mono" | "sans" | "serif";
             align: "end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start";
@@ -901,7 +901,7 @@ export class NoteShapeUtil extends ShapeUtil<TLNoteShape> {
     onEditEnd: TLOnEditEndHandler<TLNoteShape>;
     // (undocumented)
     static props: {
-        color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+        color: EnumStyleProp<"#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black">;
         size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
         font: EnumStyleProp<"draw" | "mono" | "sans" | "serif">;
         align: EnumStyleProp<"end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start">;
@@ -1011,7 +1011,7 @@ export class TextShapeUtil extends ShapeUtil<TLTextShape> {
         isLocked: boolean;
         opacity: number;
         props: {
-            color: "black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow";
+            color: "#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black";
             size: "l" | "m" | "s" | "xl" | "xxl";
             font: "draw" | "mono" | "sans" | "serif";
             align: "end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start";
@@ -1030,7 +1030,7 @@ export class TextShapeUtil extends ShapeUtil<TLTextShape> {
         y: number;
         props: {
             w: number;
-            color: "black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow";
+            color: "#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black";
             size: "l" | "m" | "s" | "xl" | "xxl";
             font: "draw" | "mono" | "sans" | "serif";
             align: "end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start";
@@ -1070,7 +1070,7 @@ export class TextShapeUtil extends ShapeUtil<TLTextShape> {
     onResize: TLOnResizeHandler<TLTextShape>;
     // (undocumented)
     static props: {
-        color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+        color: EnumStyleProp<"#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black">;
         size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
         font: EnumStyleProp<"draw" | "mono" | "sans" | "serif">;
         align: EnumStyleProp<"end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start">;

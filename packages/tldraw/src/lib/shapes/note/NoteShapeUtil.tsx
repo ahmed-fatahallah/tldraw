@@ -32,7 +32,7 @@ export class NoteShapeUtil extends ShapeUtil<TLNoteShape> {
 
 	getDefaultProps(): TLNoteShape['props'] {
 		return {
-			color: 'black',
+			color: '#4d4d4f',
 			size: 'm',
 			text: '',
 			font: 'draw',
@@ -61,7 +61,7 @@ export class NoteShapeUtil extends ShapeUtil<TLNoteShape> {
 
 		// eslint-disable-next-line react-hooks/rules-of-hooks
 		const theme = useDefaultColorTheme()
-		const adjustedColor = color === 'black' ? 'yellow' : color
+		const adjustedColor = color === 'black' ? 'black' : color
 
 		return (
 			<>
@@ -112,12 +112,12 @@ export class NoteShapeUtil extends ShapeUtil<TLNoteShape> {
 
 	override toSvg(shape: TLNoteShape, ctx: SvgExportContext) {
 		ctx.addExportDef(getFontDefForExport(shape.props.font))
-		const theme = getDefaultColorTheme({ isDarkMode: this.editor.user.isDarkMode })
+		const theme = getDefaultColorTheme()
 		const bounds = this.editor.getShapeGeometry(shape).bounds
 
 		const g = document.createElementNS('http://www.w3.org/2000/svg', 'g')
 
-		const adjustedColor = shape.props.color === 'black' ? 'yellow' : shape.props.color
+		const adjustedColor = shape.props.color === '#4d4d4f' ? '#f4a304' : shape.props.color
 
 		const rect1 = document.createElementNS('http://www.w3.org/2000/svg', 'rect')
 		rect1.setAttribute('rx', '10')

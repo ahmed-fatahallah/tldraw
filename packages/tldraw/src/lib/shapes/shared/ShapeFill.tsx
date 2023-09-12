@@ -5,7 +5,6 @@ import {
 	TLDefaultFillStyle,
 	getDefaultColorTheme,
 	useEditor,
-	useIsDarkMode,
 	useValue,
 } from '@tldraw/editor'
 import React from 'react'
@@ -18,7 +17,7 @@ export interface ShapeFillProps {
 }
 
 export function useDefaultColorTheme() {
-	return getDefaultColorTheme({ isDarkMode: useIsDarkMode() })
+	return getDefaultColorTheme()
 }
 
 export const ShapeFill = React.memo(function ShapeFill({ theme, d, color, fill }: ShapeFillProps) {

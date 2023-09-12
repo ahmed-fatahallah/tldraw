@@ -840,18 +840,13 @@ enum TDShapeType {
 }
 
 enum ColorStyle {
-	White = 'white',
-	LightGray = 'lightGray',
-	Gray = 'gray',
-	Black = 'black',
-	Green = 'green',
-	Cyan = 'cyan',
-	Blue = 'blue',
-	Indigo = 'indigo',
-	Violet = 'violet',
-	Red = 'red',
-	Orange = 'orange',
-	Yellow = 'yellow',
+	black = 'black',
+	grey = '#4d4d4f',
+	blue = '#56a5e1',
+	orange = '#e24c3c',
+	green = '#119f25',
+	yellow = '#f4a304',
+	white = '#ffffff',
 }
 
 enum SizeStyle {
@@ -1080,18 +1075,13 @@ export interface LegacyTldrawDocument {
 /* ------------------ Translations ------------------ */
 
 const v1ColorsToV2Colors: Record<ColorStyle, TLDefaultColorStyle> = {
-	[ColorStyle.White]: 'black',
-	[ColorStyle.Black]: 'black',
-	[ColorStyle.LightGray]: 'grey',
-	[ColorStyle.Gray]: 'grey',
-	[ColorStyle.Green]: 'light-green',
-	[ColorStyle.Cyan]: 'green',
-	[ColorStyle.Blue]: 'light-blue',
-	[ColorStyle.Indigo]: 'blue',
-	[ColorStyle.Orange]: 'orange',
-	[ColorStyle.Yellow]: 'yellow',
-	[ColorStyle.Red]: 'red',
-	[ColorStyle.Violet]: 'light-violet',
+	[ColorStyle.black]: 'black',
+	[ColorStyle.white]: '#ffffff',
+	[ColorStyle.grey]: '#4d4d4f',
+	[ColorStyle.green]: '#119f25',
+	[ColorStyle.blue]: '#56a5e1',
+	[ColorStyle.orange]: '#e24c3c',
+	[ColorStyle.yellow]: '#f4a304',
 }
 
 const v1FontsToV2Fonts: Record<FontStyle, TLDefaultFontStyle> = {
@@ -1165,7 +1155,7 @@ function getV2Arrowhead(decoration: Decoration | undefined): TLArrowShapeArrowhe
 
 function getV2Fill(isFilled: boolean | undefined, color: ColorStyle) {
 	return isFilled
-		? color === ColorStyle.Black || color === ColorStyle.White
+		? color === ColorStyle.black || color === ColorStyle.white
 			? 'semi'
 			: 'solid'
 		: 'none'

@@ -16,7 +16,7 @@ export function MobileStylePanel() {
 			const color = editor.sharedStyles.get(DefaultColorStyle)
 			if (!color) return 'var(--color-muted-1)'
 			if (color.type === 'mixed') return null
-			const theme = getDefaultColorTheme({ isDarkMode: editor.user.isDarkMode })
+			const theme = getDefaultColorTheme()
 			return theme[color.value].solid
 		},
 		[editor]

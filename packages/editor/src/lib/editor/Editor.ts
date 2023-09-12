@@ -8021,7 +8021,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 		} = opts
 
 		// todo: we shouldn't depend on the public theme here
-		const theme = getDefaultColorTheme({ isDarkMode: this.user.isDarkMode })
+		const theme = getDefaultColorTheme()
 
 		// ---Figure out which shapes we need to include
 		const shapeIdsToInclude = this.getShapeAndDescendantIds(ids)
@@ -8146,7 +8146,7 @@ export class Editor extends EventEmitter<TLEventMap> {
 						elm.setAttribute('width', bounds.width + '')
 						elm.setAttribute('height', bounds.height + '')
 						elm.setAttribute('fill', theme.solid)
-						elm.setAttribute('stroke', theme.grey.pattern)
+						elm.setAttribute('stroke', theme['#4d4d4f'].pattern)
 						elm.setAttribute('stroke-width', '1')
 						shapeSvgElement = elm
 					}

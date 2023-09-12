@@ -28,8 +28,8 @@ export const arrowShapeMigrations: Migrations;
 
 // @public (undocumented)
 export const arrowShapeProps: {
-    labelColor: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
-    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+    labelColor: EnumStyleProp<"#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black">;
+    color: EnumStyleProp<"#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black">;
     fill: EnumStyleProp<"none" | "pattern" | "semi" | "solid">;
     dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
     size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
@@ -145,12 +145,11 @@ export function createTLSchema({ shapes }: {
 }): TLSchema;
 
 // @public (undocumented)
-export const DefaultColorStyle: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+export const DefaultColorStyle: EnumStyleProp<"#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black">;
 
 // @public (undocumented)
 export const DefaultColorThemePalette: {
     lightMode: TLDefaultColorTheme;
-    darkMode: TLDefaultColorTheme;
 };
 
 // @public (undocumented)
@@ -187,7 +186,7 @@ export const drawShapeMigrations: Migrations;
 
 // @public (undocumented)
 export const drawShapeProps: {
-    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+    color: EnumStyleProp<"#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black">;
     fill: EnumStyleProp<"none" | "pattern" | "semi" | "solid">;
     dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
     size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
@@ -477,8 +476,8 @@ export const geoShapeMigrations: Migrations;
 // @public (undocumented)
 export const geoShapeProps: {
     geo: EnumStyleProp<"arrow-down" | "arrow-left" | "arrow-right" | "arrow-up" | "check-box" | "cloud" | "diamond" | "ellipse" | "hexagon" | "octagon" | "oval" | "pentagon" | "rectangle" | "rhombus-2" | "rhombus" | "star" | "trapezoid" | "triangle" | "x-box">;
-    labelColor: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
-    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+    labelColor: EnumStyleProp<"#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black">;
+    color: EnumStyleProp<"#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black">;
     fill: EnumStyleProp<"none" | "pattern" | "semi" | "solid">;
     dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
     size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
@@ -493,9 +492,7 @@ export const geoShapeProps: {
 };
 
 // @public (undocumented)
-export function getDefaultColorTheme(opts: {
-    isDarkMode: boolean;
-}): TLDefaultColorTheme;
+export function getDefaultColorTheme(): TLDefaultColorTheme;
 
 // @public (undocumented)
 export function getDefaultTranslationLocale(): TLLanguage['locale'];
@@ -514,7 +511,7 @@ export const highlightShapeMigrations: Migrations;
 
 // @public (undocumented)
 export const highlightShapeProps: {
-    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+    color: EnumStyleProp<"#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black">;
     size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
     segments: T.ArrayOfValidator<{
         type: "free" | "straight";
@@ -665,7 +662,7 @@ export const lineShapeMigrations: Migrations;
 
 // @public (undocumented)
 export const lineShapeProps: {
-    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+    color: EnumStyleProp<"#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black">;
     dash: EnumStyleProp<"dashed" | "dotted" | "draw" | "solid">;
     size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
     spline: EnumStyleProp<"cubic" | "line">;
@@ -680,7 +677,7 @@ export const noteShapeMigrations: Migrations;
 
 // @public (undocumented)
 export const noteShapeProps: {
-    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+    color: EnumStyleProp<"#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black">;
     size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
     font: EnumStyleProp<"draw" | "mono" | "sans" | "serif">;
     align: EnumStyleProp<"end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start">;
@@ -757,7 +754,7 @@ export const textShapeMigrations: Migrations;
 
 // @public (undocumented)
 export const textShapeProps: {
-    color: EnumStyleProp<"black" | "blue" | "green" | "grey" | "light-blue" | "light-green" | "light-red" | "light-violet" | "orange" | "red" | "violet" | "yellow">;
+    color: EnumStyleProp<"#119f25" | "#4d4d4f" | "#56a5e1" | "#e24c3c" | "#f4a304" | "#ff2aff" | "#ffffff" | "black">;
     size: EnumStyleProp<"l" | "m" | "s" | "xl" | "xxl">;
     font: EnumStyleProp<"draw" | "mono" | "sans" | "serif">;
     align: EnumStyleProp<"end-legacy" | "end" | "middle-legacy" | "middle" | "start-legacy" | "start">;

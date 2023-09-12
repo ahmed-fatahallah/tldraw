@@ -147,8 +147,8 @@ describe('Editor.styles', () => {
 describe('Editor.setStyle', () => {
 	it('should set style for selected shapes', () => {
 		const ids = editor.createShapesFromJsx([
-			<TL.geo ref="A" x={0} y={0} color="blue" />,
-			<TL.geo ref="B" x={0} y={0} color="green" />,
+			<TL.geo ref="A" x={0} y={0} color="#56a5e1" />,
+			<TL.geo ref="B" x={0} y={0} color="#119f25" />,
 		])
 
 		editor.setSelectedShapes([ids.A, ids.B])

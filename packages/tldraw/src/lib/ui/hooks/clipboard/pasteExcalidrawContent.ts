@@ -416,39 +416,13 @@ const fontFamilyToFontType: Record<number, TLDefaultFontStyle> = {
 }
 
 const colorsToColors: Record<string, TLDefaultColorStyle> = {
-	'#ffffff': 'grey',
-	// Strokes
 	'#000000': 'black',
-	'#343a40': 'black',
-	'#495057': 'grey',
-	'#c92a2a': 'red',
-	'#a61e4d': 'light-red',
-	'#862e9c': 'violet',
-	'#5f3dc4': 'light-violet',
-	'#364fc7': 'blue',
-	'#1864ab': 'light-blue',
-	'#0b7285': 'light-green',
-	'#087f5b': 'light-green',
-	'#2b8a3e': 'green',
-	'#5c940d': 'light-green',
-	'#e67700': 'yellow',
-	'#d9480f': 'orange',
-	// Backgrounds
-	'#ced4da': 'grey',
-	'#868e96': 'grey',
-	'#fa5252': 'light-red',
-	'#e64980': 'red',
-	'#be4bdb': 'light-violet',
-	'#7950f2': 'violet',
-	'#4c6ef5': 'blue',
-	'#228be6': 'light-blue',
-	'#15aabf': 'light-green',
-	'#12b886': 'green',
-	'#40c057': 'green',
-	'#82c91e': 'light-green',
-	'#fab005': 'yellow',
-	'#fd7e14': 'orange',
-	'#212529': 'grey',
+	'#4d4d4f': '#4d4d4f',
+	'#56a5e1': '#56a5e1',
+	'#e24c3c': '#e24c3c',
+	'#119f25': '#119f25',
+	'#f4a304': '#f4a304',
+	'#ffffff': '#ffffff',
 }
 
 const strokeStylesToStrokeTypes: Record<string, TLDefaultDashStyle> = {

@@ -164,20 +164,20 @@ const getDefaultPatterns = () => {
 			ctx.fillStyle = DefaultColorThemePalette.lightMode.black.semi
 			ctx.fillRect(0, 0, 1, 1)
 		})
-		const blackPixelBlob = canvasBlob([1, 1], (ctx) => {
-			ctx.fillStyle = DefaultColorThemePalette.darkMode.black.semi
-			ctx.fillRect(0, 0, 1, 1)
-		})
+		// const blackPixelBlob = canvasBlob([1, 1], (ctx) => {
+		// 	ctx.fillStyle = DefaultColorThemePalette.darkMode.black.semi
+		// 	ctx.fillRect(0, 0, 1, 1)
+		// })
 		defaultPatterns.push({
 			zoom: i,
 			url: whitePixelBlob,
 			darkMode: false,
 		})
-		defaultPatterns.push({
-			zoom: i,
-			url: blackPixelBlob,
-			darkMode: true,
-		})
+		// defaultPatterns.push({
+		// 	zoom: i,
+		// 	url: blackPixelBlob,
+		// 	darkMode: true,
+		// })
 	}
 	return defaultPatterns
 }
