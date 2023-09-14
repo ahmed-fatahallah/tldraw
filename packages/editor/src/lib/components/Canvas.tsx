@@ -24,9 +24,7 @@ export const Canvas = track(function Canvas({ className }: { className?: string 
 	const editor = useEditor()
 
 	useEffect(() => {
-		editor.setCurrentTool('draw')
 		editor.updateInstanceState({ canMoveCamera: false })
-
 		editor.updateInstanceState({ isFocused: true })
 	}, [editor])
 
